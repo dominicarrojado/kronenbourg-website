@@ -1,0 +1,1414 @@
+/*--------------------------------------------------------------
+FONT FACES
+--------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../fonts/Brandon-Light.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../fonts/Brandon-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../fonts/Brandon-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../fonts/Brandon-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../fonts/Brandon-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../fonts/Brandon-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Kronenbourg';
+  src: url('../fonts/Kronenbourg-1664-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/*--------------------------------------------------------------
+NORMALIZE
+--------------------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: 'Brandon', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  color: #4d4d4d;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+TYPOGRAPHY
+--------------------------------------------------------------*/
+
+.type-kronenbourg {
+  font-family: 'Kronenbourg', 'Times New Roman', Times, Baskerville, Georgia,
+    serif;
+  font-weight: 400 !important;
+  font-style: italic !important;
+}
+
+.font-weight-300 {
+  font-weight: 300;
+}
+
+/*--------------------------------------------------------------
+BUTTONS
+--------------------------------------------------------------*/
+
+.btn-kronenbourg {
+  display: inline-block;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  padding: 12px 50px;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background-color: #ee2a24;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-kronenbourg:hover {
+  color: #ffffff;
+  background-color: #d51710;
+}
+
+.btn-kronenbourg:active {
+  color: #ffffff;
+  background-color: #a6120c;
+}
+
+.btn-kronenbourg:focus {
+  outline: none;
+}
+
+/*--------------------------------------------------------------
+HELPERS
+--------------------------------------------------------------*/
+
+.background-image-cover {
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.list-container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.force-wrap {
+  word-wrap: break-word;
+  word-break: normal;
+  -ms-word-break: normal;
+  word-break: break-word;
+}
+
+.with-header {
+  padding-top: 160px;
+}
+
+/*--------------------------------------------------------------
+HEADER
+--------------------------------------------------------------*/
+
+header {
+  position: fixed;
+  height: 61px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 20;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+header.hide {
+  -webkit-transform: translateY(-200%);
+  -moz-transform: translateY(-200%);
+  -ms-transform: translateY(-200%);
+  -o-transform: translateY(-200%);
+  transform: translateY(-200%);
+}
+
+.header {
+  height: 54px;
+  padding: 15px 0;
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  background-color: #0056a3;
+}
+
+.header > .home-btn {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 14px;
+  font-style: normal;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.header > .home-btn > .icon {
+  vertical-align: middle;
+  margin-top: -4px;
+  margin-right: 3px;
+}
+
+.header > .home-btn:hover {
+  opacity: 0.7;
+}
+
+.header > .space {
+  display: inline-block;
+  margin-left: 41px;
+}
+
+.header-logo {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  margin-left: 5px;
+}
+
+.header-logo > a {
+  position: absolute;
+  display: block;
+  top: -32px;
+  left: 0;
+  text-decoration: none;
+}
+
+.header-line {
+  height: 3px;
+  background-color: #ee2a24;
+}
+
+/*--------------------------------------------------------------
+FOOTER
+--------------------------------------------------------------*/
+
+footer {
+  padding: 32px 50px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #032651;
+  overflow: hidden;
+}
+
+footer > div {
+  vertical-align: top;
+  line-height: 20px;
+  opacity: 0.8;
+}
+
+footer > div:first-child {
+  float: left;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+footer > div:last-child {
+  float: right;
+}
+
+footer > div > a {
+  color: #ffffff;
+}
+
+footer > div > a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+footer > div .separator {
+  opacity: 0.3;
+  margin: 0 5px;
+}
+
+/*--------------------------------------------------------------
+MODALS
+--------------------------------------------------------------*/
+
+.modal-backdrop {
+  background-color: #032651;
+}
+
+.modal-backdrop.show {
+  opacity: 0.95;
+}
+
+.modal-age-gate .modal-content {
+  border-radius: 0;
+}
+
+.modal-age-gate .modal-body {
+  padding: 40px 20px;
+}
+
+.modal-age-gate .title {
+  max-width: 624px;
+  height: 106px;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url('../images/kronenbourg-welcome-to-1664-sg-banner.png');
+}
+
+.modal-age-gate .title > h5 {
+  color: #4d4d4d;
+  font-size: 42px;
+  line-height: 1;
+}
+
+.modal-age-gate .description {
+  color: #ee2a24;
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: 5px;
+}
+
+.modal-age-gate .form-item {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.modal-age-gate .label {
+  font-size: 22px;
+}
+
+.modal-age-gate .input-container {
+  position: relative;
+  border: 1px solid #4d4d4d;
+}
+
+.modal-age-gate .input-container > .form-control {
+  min-height: 44px;
+  border: none;
+  color: #4d4d4d;
+  font-family: 'Brandon', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.modal-age-gate .input-container > .form-control:focus + img {
+  opacity: 0;
+}
+
+.modal-age-gate .input-container > .form-control:focus + img + .active {
+  opacity: 1;
+}
+
+.modal-age-gate .input-container > img {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.modal-age-gate .input-container > img + .active {
+  opacity: 0;
+}
+
+.modal-age-gate .helper {
+  max-width: 730px;
+  margin: 0 auto;
+  color: #b1b1b1;
+  font-size: 14px;
+}
+
+.modal-age-gate .helper a {
+  display: inline-block;
+  font-weight: bold;
+  color: #b1b1b1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-age-gate .helper a:hover {
+  color: #b1b1b1;
+  text-decoration: underline;
+}
+
+.modal-age-gate .footer {
+  padding: 15px;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #f0f0f0;
+}
+
+.modal-age-gate .content-error {
+  max-width: 530px;
+  margin: 0 auto;
+  color: #ee2a24;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/*--------------------------------------------------------------
+HOME
+--------------------------------------------------------------*/
+
+.home-first-panel {
+  position: relative;
+  min-height: 697px;
+  padding-top: 160px;
+  background-image: url('../images/kronenbourg-sketch-background.png');
+}
+
+.home-first-panel > .image-container,
+.home-first-panel > .headline-container {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 446px;
+}
+
+.home-first-panel > .image-container > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 446px;
+  height: auto;
+}
+
+.home-first-panel > .headline-container > .headline {
+  position: absolute;
+  display: block;
+  width: 100%;
+  max-width: 332px;
+  top: 0;
+  left: -60%;
+  font-weight: bold;
+  font-size: 31px;
+  color: #ee2a24;
+  line-height: 1.2;
+  letter-spacing: 10px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.home-first-panel > .headline-container > .headline > h1 {
+  margin-bottom: 10px;
+}
+
+.home-first-panel > .headline-container > .headline > h1 > img {
+  width: 100%;
+  max-height: 332px;
+}
+
+.home-second-panel {
+  padding: 65px 0;
+  font-size: 0;
+  color: #ffffff;
+  line-height: 0;
+  letter-spacing: 0;
+  text-align: center;
+  background-color: #0056a3;
+}
+
+.home-second-panel > span {
+  display: inline-block;
+  width: 315px;
+  vertical-align: top;
+  font-size: 20px;
+  font-style: italic;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.home-second-panel > span.middle {
+  width: 402px;
+}
+
+.home-third-panel {
+  position: relative;
+  padding: 70px 20px 20px;
+}
+
+.home-third-panel > .title {
+  max-width: 1053px;
+  min-height: 85px;
+  padding: 25px 0 0;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url('../images/kronenbourg-le-events-and-announcements-banner.png');
+}
+
+.home-third-panel > .title > h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ee2a24;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+}
+
+.home-third-panel > .title > h2 > span {
+  font-size: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -10px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.home-third-panel > .announcements {
+  position: relative;
+  max-width: 1000px;
+  min-height: 350px;
+  margin: 0 auto;
+  padding: 40px 80px;
+}
+
+.home-third-panel > .announcements > .left-bottom-border,
+.home-third-panel > .announcements > .right-bottom-border {
+  position: absolute;
+  bottom: 0;
+}
+
+.home-third-panel > .announcements > .left-bottom-border {
+  left: 0;
+}
+
+.home-third-panel > .announcements > .right-bottom-border {
+  right: 0;
+}
+
+.home-third-panel > .announcements > .carousel-controls {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  text-align: center;
+  z-index: 15;
+  cursor: default;
+}
+
+.home-third-panel > .announcements > .carousel-controls > * {
+  vertical-align: middle;
+}
+
+.home-third-panel > .announcements > .carousel-controls > a {
+  position: relative;
+  width: 22px;
+  height: 12px;
+  background-repeat: no-repeat;
+}
+
+.home-third-panel > .announcements > .carousel-controls > a:first-child {
+  margin-right: 15px;
+}
+
+.home-third-panel > .announcements > .carousel-controls > a:last-child {
+  margin-left: 15px;
+}
+
+.home-third-panel > .announcements > .carousel-controls > a:hover > .active {
+  opacity: 1;
+}
+
+.home-third-panel > .announcements > .carousel-controls > a > img {
+  vertical-align: top;
+}
+
+.home-third-panel > .announcements > .carousel-controls > a > .active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.home-third-panel > .announcements > .carousel-controls > .carousel-indicators {
+  position: relative;
+  bottom: 0;
+  display: inline-block;
+  justify-content: flex-start;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: 0;
+}
+
+.home-third-panel
+  > .announcements
+  > .carousel-controls
+  > .carousel-indicators
+  > li {
+  display: inline-block;
+  max-width: 11px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  margin-right: 4px;
+  margin-left: 4px;
+  background-color: #cccccc;
+}
+
+.home-third-panel
+  > .announcements
+  > .carousel-controls
+  > .carousel-indicators
+  li.active {
+  background-color: #ee2a24;
+}
+
+.home-third-panel > .announcements .announcement-item {
+  position: relative;
+  padding: 10px;
+}
+
+.home-third-panel > .announcements .announcement-item > img {
+  float: left;
+  width: 100%;
+  max-width: 423px;
+  height: auto;
+  margin-right: 45px;
+  margin-bottom: 25px;
+  border: 6px solid #ffffff;
+  -webkit-box-shadow: 0 0 10px 3px #bbbbbb;
+  -moz-box-shadow: 0 0 10px 3px #bbbbbb;
+  box-shadow: 0 0 10px 3px #bbbbbb;
+}
+
+.home-third-panel > .announcements .announcement-item > .title {
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-style: italic;
+  color: #4d4d4d;
+  line-height: 1.3;
+}
+
+.home-third-panel > .announcements .announcement-item > .date,
+.home-third-panel > .announcements .announcement-item > .body {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.home-third-panel > .announcements .announcement-item > .date {
+  margin-bottom: 20px;
+  color: #979797;
+}
+
+.home-third-panel > .announcements .announcement-item > .body {
+  color: #4d4d4d;
+  line-height: 1.3;
+}
+
+.home-third-panel > .announcements .announcement-item > .body a,
+.home-third-panel > .announcements .announcement-item > .body a:hover {
+  color: #ee2a24;
+}
+
+.home-fourth-panel {
+  position: relative;
+  padding: 30px 0 60px;
+  background-color: #ffffff;
+}
+
+.home-fourth-panel > .lines {
+  position: absolute;
+  top: 257px;
+  width: 100%;
+}
+
+.home-fourth-panel > .lines > div {
+  width: 100%;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #0056a3;
+}
+
+.home-fourth-panel > .lines > div:last-child {
+  background-color: #ee2a24;
+}
+
+.home-fourth-panel > .instagram {
+  position: relative;
+  width: 100%;
+  min-height: 362px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.home-fourth-panel > .instagram > .title {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  max-width: 225px;
+  width: 100%;
+  height: auto;
+}
+
+.home-fourth-panel > .instagram > .images-container {
+  position: relative;
+  max-width: 725px;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: 0;
+}
+
+.home-fourth-panel > .instagram > .images-container > img:first-child {
+  max-width: 352px;
+  height: auto;
+  float: left;
+}
+
+.home-fourth-panel > .instagram > .images-container > img {
+  display: inline-block;
+  margin: 5px;
+  width: 100%;
+  max-width: 171px;
+}
+
+.home-fifth-panel {
+  position: relative;
+  padding: 60px 20px;
+  color: #ffffff;
+  background-color: #0056a3;
+}
+
+.home-fifth-panel > .title {
+  width: 100%;
+  max-width: 573px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  background-image: url('../images/kronenbourg-mailing-list-banner.png');
+  background-size: contain;
+}
+
+.home-fifth-panel > .title > h2 {
+  font-size: 49px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.home-fifth-panel > .description {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 35px auto;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.home-fifth-panel > .subscription-form {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.home-fifth-panel > .subscription-form .subscription-input {
+  width: 300px;
+  height: 45px;
+  margin-right: 10px;
+  vertical-align: middle;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  padding: 0 25px;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 45px;
+}
+
+.home-fifth-panel > .subscription-form .subscription-btn {
+  height: 45px;
+  vertical-align: middle;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.home-fifth-panel > .subscription-form .mc4wp-response {
+  max-width: 700px;
+  width: 100%;
+  margin: 20px auto 0;
+  font-size: 17px;
+}
+
+.home-fifth-panel > .social {
+  text-align: center;
+  cursor: default;
+}
+
+.home-fifth-panel > .social > a {
+  margin: 0 25px;
+  cursor: pointer;
+}
+
+.home-fifth-panel > .social > a:hover {
+  text-decoration: none;
+}
+
+.home-fifth-panel > .social > a:hover > img {
+  opacity: 0.5;
+}
+
+.home-fifth-panel > .social > a > img {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+SUBSCRIBE
+--------------------------------------------------------------*/
+
+.subscribe-first-panel {
+  position: relative;
+  padding: 200px 20px 267px;
+  background-image: url('../images/kronenbourg-sketch-background.png');
+}
+
+.subscribe-first-panel > .image-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 332px;
+  margin: 0 auto;
+}
+
+.subscribe-first-panel > .image-container > img {
+  position: absolute;
+  top: -328px;
+  left: -100%;
+  width: 100%;
+  max-width: 292px;
+  height: auto;
+}
+
+.subscribe-first-panel > .headline {
+  display: block;
+  width: 100%;
+  max-width: 332px;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 31px;
+  color: #ee2a24;
+  line-height: 1.2;
+  letter-spacing: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subscribe-first-panel > .headline > h1 {
+  margin-bottom: 20px;
+}
+
+.subscribe-first-panel > .headline > h1 > img {
+  width: 100%;
+  max-height: 332px;
+}
+
+.subscribe-first-panel > .home-btn-container {
+  display: none;
+  margin-top: 40px;
+}
+
+.subscribe-first-panel > .home-btn-container > a {
+  position: relative;
+  padding: 10px 25px 10px 52px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #041e41;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  border: 2px solid #041e41;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.subscribe-first-panel > .home-btn-container > a:hover {
+  color: #ffffff;
+  border-color: #041e41;
+  background-color: #041e41;
+}
+
+.subscribe-first-panel > .home-btn-container > a:hover > .icon {
+  opacity: 0;
+}
+
+.subscribe-first-panel > .home-btn-container > a:hover > .icon.active {
+  opacity: 1;
+}
+
+.subscribe-first-panel > .home-btn-container > a > .icon {
+  position: absolute;
+  top: 22px;
+  left: 25px;
+  margin-top: -6px;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.subscribe-first-panel > .home-btn-container > a > .icon.active {
+  opacity: 0;
+}
+
+/*--------------------------------------------------------------
+PRIVACY POLICY
+--------------------------------------------------------------*/
+
+.privacy-policy {
+  color: #4d4d4d;
+  padding-bottom: 300px;
+  background-image: url('../images/kronenbourg-sketch-background-2.png');
+  background-size: 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.privacy-policy > .wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.privacy-policy h1 {
+  font-size: 48px;
+}
+
+.privacy-policy .content {
+  font-size: 20px;
+}
+
+.privacy-policy .content a,
+.privacy-policy .content a:hover {
+  color: #ee2a24;
+}
+
+.privacy-policy .content h2 {
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+/*--------------------------------------------------------------
+MEDIA QUERIES
+--------------------------------------------------------------*/
+
+@media only screen and (max-width: 1076px) {
+  /*--------------------------------------------------------------
+    HEADER
+    --------------------------------------------------------------*/
+  .header > .home-btn {
+    display: none;
+  }
+
+  /*--------------------------------------------------------------
+    HOME
+    --------------------------------------------------------------*/
+
+  .home-first-panel {
+    background-image: none;
+    padding-top: 0;
+  }
+
+  .home-first-panel > .image-container {
+    width: 100%;
+    padding: 160px 20% 0;
+    background-image: url('../images/kronenbourg-sketch-background.png');
+    text-align: center;
+  }
+
+  .home-first-panel > .image-container > img {
+    max-width: 300px;
+    position: relative;
+  }
+
+  .home-first-panel > .headline-container {
+    width: auto;
+    padding-top: 50px;
+    margin-bottom: 75px;
+  }
+
+  .home-first-panel > .headline-container > .headline {
+    position: relative;
+    max-width: 250px;
+    margin: 0 auto;
+    left: 0;
+    font-size: 22px;
+  }
+
+  .home-first-panel > .headline-container > .headline > h1 {
+    margin-bottom: 10px;
+  }
+
+  .home-second-panel {
+    padding: 65px 40px;
+    text-align: justify;
+  }
+
+  .home-second-panel > span,
+  .home-second-panel > span.middle {
+    display: inline;
+    width: auto;
+  }
+
+  .home-third-panel > .title {
+    max-width: 789px;
+    min-height: 111px;
+    padding: 25px 100px 0;
+    background-image: url('../images/kronenbourg-le-events-and-announcements-banner-sm.png');
+  }
+
+  .home-third-panel > .announcements {
+    padding: 50px 10px;
+  }
+
+  .home-third-panel > .announcements > .left-bottom-border,
+  .home-third-panel > .announcements > .right-bottom-border {
+    display: none;
+  }
+
+  .home-third-panel > .announcements .announcement-item {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .home-third-panel > .announcements .announcement-item > img {
+    float: none;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .home-fourth-panel {
+    position: relative;
+    background-color: #ffffff;
+  }
+
+  .home-fourth-panel > .lines {
+    top: 430px;
+  }
+
+  .home-fourth-panel > .instagram > .title {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .home-fourth-panel > .instagram > .images-container {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /*--------------------------------------------------------------
+    SUBSCRIBE
+    --------------------------------------------------------------*/
+
+  .subscribe-first-panel {
+    padding-bottom: 140px;
+  }
+
+  .subscribe-first-panel > .image-container {
+    display: none;
+  }
+
+  .subscribe-first-panel > .headline {
+    max-width: 280px;
+    font-size: 24px;
+  }
+
+  .subscribe-first-panel > .headline > h1 {
+    margin-bottom: 10px;
+  }
+
+  .subscribe-first-panel > .home-btn-container {
+    display: block;
+  }
+
+  /*--------------------------------------------------------------
+    PRIVACY POLICY
+    --------------------------------------------------------------*/
+
+  .privacy-policy {
+    padding-bottom: 100px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  /*--------------------------------------------------------------
+    MODALS
+    --------------------------------------------------------------*/
+  .modal-age-gate .title {
+    height: auto;
+    background-image: none;
+  }
+
+  .modal-age-gate .title > h5 {
+    font-size: 37px;
+    line-height: 1.3;
+  }
+
+  .modal-age-gate .description {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+}
+
+@media only screen and (max-width: 842px) {
+  /*--------------------------------------------------------------
+    HOME
+    --------------------------------------------------------------*/
+
+  .home-third-panel > .title {
+    max-width: 565px;
+    min-height: 158px;
+    padding: 45px 100px;
+    background-image: url('../images/kronenbourg-le-events-and-announcements-banner-xs.png');
+  }
+
+  .home-third-panel > .title > h2 {
+    letter-spacing: 7px;
+  }
+
+  .home-third-panel > .title > h2 > span {
+    display: none;
+  }
+
+  .home-fourth-panel > .lines {
+    top: 500px;
+  }
+
+  .home-fourth-panel > .instagram {
+    padding: 0 20px;
+  }
+
+  .home-fourth-panel > .instagram > .images-container {
+    max-width: 100%;
+    width: 362px;
+    text-align: center;
+  }
+
+  .home-fourth-panel > .instagram > .images-container > img:first-child {
+    max-width: 97%;
+    float: none;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  /*--------------------------------------------------------------
+    FOOTER
+    --------------------------------------------------------------*/
+
+  footer > div:first-child {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  footer > div:last-child {
+    font-size: 15px;
+  }
+
+  footer > div:first-child,
+  footer > div:last-child {
+    float: none;
+    text-align: center;
+  }
+
+  /*--------------------------------------------------------------
+    PRIVACY POLICY
+    --------------------------------------------------------------*/
+
+  .privacy-policy {
+    padding-bottom: 50px;
+  }
+
+  .privacy-policy h1 {
+    font-size: 36px;
+  }
+
+  .privacy-policy .content {
+    font-size: 18px;
+  }
+
+  .privacy-policy .content h2 {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 628px) {
+  /*--------------------------------------------------------------
+    HOME
+    --------------------------------------------------------------*/
+
+  .home-fifth-panel > .title {
+    background-image: none;
+  }
+
+  .home-fifth-panel > .subscription-form .subscription-input {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .home-fifth-panel > .subscription-form .subscription-btn {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /*--------------------------------------------------------------
+    HOME
+    --------------------------------------------------------------*/
+
+  .home-third-panel > .title {
+    min-height: 0;
+    padding: 0 10px;
+    background-image: none;
+  }
+
+  .home-third-panel > .title > h2 {
+    font-size: 25px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (max-width: 402px) {
+  /*--------------------------------------------------------------
+    HEADER
+    --------------------------------------------------------------*/
+
+  .header {
+    font-size: 0;
+  }
+
+  .header > .space {
+    display: none;
+  }
+
+  .header-logo > a {
+    top: -15px;
+  }
+
+  /*--------------------------------------------------------------
+    HOME
+    --------------------------------------------------------------*/
+
+  .home-second-panel {
+    padding: 50px 30px;
+    text-align: justify;
+  }
+
+  .home-third-panel > .title > h2 {
+    font-size: 20px;
+  }
+
+  .home-fourth-panel > .instagram > .images-container > img {
+    max-width: 97%;
+  }
+}
+
+@media only screen and (max-width: 342px) {
+  /*--------------------------------------------------------------
+    HOME
+    --------------------------------------------------------------*/
+
+  .home-third-panel > .title > h2 {
+    font-size: 18px;
+    letter-spacing: 6px;
+  }
+
+  .home-fifth-panel > .title > h2 {
+    font-size: 35px;
+  }
+}
+
+/*--------------------------------------------------------------
+PLUGIN OVERRIDES
+--------------------------------------------------------------*/
+
+#sb_instagram {
+  position: relative;
+  max-width: 725px !important;
+  width: 100%;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+#sb_instagram > #sbi_images {
+  float: none;
+}
+
+#sb_instagram > #sbi_images > .sbi_loader {
+  display: none;
+}
+
+#sb_instagram > #sbi_images > .sbi_item {
+  position: relative;
+  display: inline-block;
+  margin: 5px !important;
+  width: 100%;
+  max-width: 171px;
+  max-height: 171px;
+  background-color: #ffffff;
+}
+
+#sb_instagram > #sbi_images > .sbi_item:first-child {
+  max-width: 352px;
+  max-height: 352px;
+  float: left;
+}
+
+#sb_instagram > #sbi_images > .sbi_item > .sbi_photo_wrap > .sbi_photo {
+  height: auto !important;
+}
+
+#sb_instagram > #sbi_images > .sbi_item > .sbi_photo_wrap > .sbi_photo > img {
+  display: inline-block !important;
+}
+
+#sb_instagram > #sbi_load {
+  display: none;
+}
+
+@media only screen and (max-width: 1076px) {
+  #sb_instagram {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 842px) {
+  #sb_instagram {
+    max-width: 362px !important;
+    text-align: center;
+  }
+
+  #sb_instagram > #sbi_images > .sbi_item:first-child {
+    max-width: 97%;
+    float: none;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #sb_instagram > #sbi_images > .sbi_item {
+    max-width: 97%;
+    max-height: 97%;
+  }
+}
